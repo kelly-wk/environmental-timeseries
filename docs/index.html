@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#356F9B">
+  <meta name="description" content="An audited reanalysis replacing overlapping-window pseudo-replication with dependence-aware interrupted time-series methods.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="環境時系列データの再解析 / Environmental Time-Series Reanalysis">
+  <meta property="og:description" content="An audited reanalysis replacing overlapping-window pseudo-replication with dependence-aware interrupted time-series methods.">
+  <meta property="og:url" content="https://kelly-wk.github.io/environmental-timeseries/">
+  <meta property="og:image" content="https://kelly-wk.github.io/environmental-timeseries/social-preview.svg">
+  <title>環境時系列データの再解析 / Environmental Time-Series Reanalysis</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="tier-public_case_study" style="--accent:#356F9B;--accent-dark:#252A32;--accent-soft:#E5EFF6;--hero-start:#252A32">
+  <a class="skip-link" href="#content">本文へ / Skip to content</a>
+  <header class="project-hero">
+    <div class="hero-inner">
+      <div class="hero-topline">
+        <div class="eyebrow">
+          <span>統計モデリング・ベイズ推論 / Statistical Modeling &amp; Bayesian Inference</span>
+        </div>
+        <p class="tier-badge"><span lang="ja">公開ケーススタディ</span><span lang="en">Public case study</span></p>
+      </div>
+      <h1><span lang="ja">環境時系列データの再解析</span><span lang="en">Environmental Time-Series Reanalysis</span></h1>
+      <div class="hero-summary">
+        <div class="copy-pair lede"><p lang="ja">重複窓による擬似反復を避け、依存性を考慮した介入時系列へ再設計した監査研究。</p><p class="translation" lang="en">An audited reanalysis replacing overlapping-window pseudo-replication with dependence-aware interrupted time-series methods.</p></div>
+        <div class="hero-facts">
+          <dl class="project-meta">
+            <div><dt>状態 / Status</dt><dd><span lang="ja">再解析設計修復済み・数値結果非公開</span><span lang="en">Reanalysis design repaired · numeric results withheld</span></dd></div>
+            <div><dt>言語 / Language</dt><dd>R</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="method-block">
+        <p class="method-label">技術スタック / Tech Stack</p>
+        <ul class="method-list" aria-label="Methods"><li>R</li><li>Interrupted time series</li><li>HAC covariance</li><li>AR(1) errors</li><li>Moving-block bootstrap</li><li>Lag analysis</li></ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="shell">
+    
+    <section aria-labelledby="highlights-title">
+      <div class="section-heading"><p>01</p><h2 id="highlights-title">主なポイント <span lang="en">Highlights</span></h2></div>
+      <div class="highlight-grid"><article class="highlight">
+          <span class="highlight-number" aria-hidden="true">1</span>
+          <div class="copy-pair"><p lang="ja">重複移動窓を独立標本として扱う誤った仮定を特定。</p><p class="translation" lang="en">Identified the invalid assumption that overlapping moving windows were independent samples.</p></div>
+        </article><article class="highlight">
+          <span class="highlight-number" aria-hidden="true">2</span>
+          <div class="copy-pair"><p lang="ja">日次系列を直接モデル化し、HAC・AR(1)・移動ブロック法で依存性を反映。</p><p class="translation" lang="en">Modeled the daily series directly and represented dependence with HAC, AR(1), and moving-block methods.</p></div>
+        </article><article class="highlight">
+          <span class="highlight-number" aria-hidden="true">3</span>
+          <div class="copy-pair"><p lang="ja">代替仕様を保持し、観察時系列から因果効果を断定しない報告へ修正。</p><p class="translation" lang="en">Retained alternative specifications and revised the report to avoid causal claims from an observational series.</p></div>
+        </article></div>
+    </section>
+
+    <section aria-labelledby="flow-title">
+      <div class="section-heading"><p>02</p><h2 id="flow-title">研究の流れ <span lang="en">Research Flow</span></h2></div>
+      <ol class="flow-grid"><li class="flow-card" data-step="1">
+              <h3><span lang="ja">課題</span><span lang="en">Problem</span></h3>
+              <div class="copy-pair"><p lang="ja">重複窓と系列相関によって過小評価された不確実性を修正する。</p><p class="translation" lang="en">Correct uncertainty that was understated by overlapping windows and serial correlation.</p></div>
+            </li><li class="flow-card" data-step="2">
+              <h3><span lang="ja">方法</span><span lang="en">Method</span></h3>
+              <div class="copy-pair"><p lang="ja">日次データの介入時系列にHAC、AR(1)、移動ブロックブートストラップを適用する。</p><p class="translation" lang="en">Apply HAC, AR(1), and moving-block bootstrap methods to a daily interrupted time series.</p></div>
+            </li><li class="flow-card" data-step="3">
+              <h3><span lang="ja">検証</span><span lang="en">Validation</span></h3>
+              <div class="copy-pair"><p lang="ja">ラグと仕様を変えた感度分析で、推定の方向と不確実性の依存を確認する。</p><p class="translation" lang="en">Use lag and specification sensitivity analyses to assess dependence of direction and uncertainty.</p></div>
+            </li><li class="flow-card" data-step="4">
+              <h3><span lang="ja">成果</span><span lang="en">Outcome</span></h3>
+              <div class="copy-pair"><p lang="ja">独立性を仮定した元解析を、依存性を明示する再解析設計へ置き換えた。</p><p class="translation" lang="en">Replaced the independence-based original analysis with an explicitly dependence-aware design.</p></div>
+            </li></ol>
+    </section>
+
+    <section class="limitations" aria-labelledby="limits-title">
+      <div class="section-heading"><p>03</p><h2 id="limits-title">限界と適用範囲 <span lang="en">Limitations &amp; Scope</span></h2></div>
+      <ul><li><div class="copy-pair"><p lang="ja">授業由来の原データは公開権限が未確認で、介入後期間も短いため因果解釈はできない。</p><p class="translation" lang="en">Publication rights for the course-supplied raw data are unconfirmed, and the short post-intervention period precludes causal interpretation.</p></div></li></ul>
+    </section>
+
+    <section class="publication" aria-labelledby="publication-title">
+      <div class="section-heading"><p>04</p><h2 id="publication-title">公開範囲 <span lang="en">Publication Boundary</span></h2></div>
+      <div class="publication-panel">
+        <p class="tier-badge"><span lang="ja">公開ケーススタディ</span><span lang="en">Public case study</span></p>
+        <div class="copy-pair"><p lang="ja">公開ページは再解析設計と監査上の学びのみ。原データの利用・再配布許諾が未確認のため、コード、図表、数値結果は公開しない。</p><p class="translation" lang="en">The public page covers only the repaired analysis design and audit lessons. Code, figures, and numeric results remain private because permission to use and redistribute the source data is unconfirmed.</p></div>
+      </div>
+      <div class="cta-grid"><a class="cta" href="https://github.com/kelly-wk/environmental-timeseries"><strong lang="ja">リポジトリ</strong><span lang="en">Repository</span><span aria-hidden="true">↗</span></a><a class="cta" href="https://github.com/kelly-wk/environmental-timeseries/blob/main/CASE_STUDY.md"><strong lang="ja">レポート</strong><span lang="en">Report</span><span aria-hidden="true">↗</span></a><span class="cta is-disabled" aria-disabled="true"><strong lang="ja">再現手順</strong><span lang="en">Reproduce</span><small>この公開レベルでは利用できません / Not available at this publication tier</small></span></div>
+    </section>
+  </main>
+
+  <footer>
+    <p><span lang="ja">公開レベルはページ上で常に明示されます。</span> <span lang="en">Publication tier is always shown explicitly.</span></p>
+    <p>kelly-wk · environmental-timeseries</p>
+  </footer>
+</body>
+</html>
